@@ -2,7 +2,7 @@ An Elixir docker image for Raspberry Pi.
 
 Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory card and run `docker pull joakimk/rpi-elixir` to get:
 
-![](https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/10794/29896/UqWChcQoYl7vADa/Screen%20Shot%202015-11-04%20at%2018.47.27.png)
+![](https://dl.dropboxusercontent.com/u/136929/github/rpi-elixir.png)
 
 ## About
 
