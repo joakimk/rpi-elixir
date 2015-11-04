@@ -40,11 +40,13 @@ This takes 12 minutes on a Raspberry Pi 2.
 ## Publishing
 
     docker tag 5555555555 joakimk/rpi-elixir:version
+    docker tag 5555555555 joakimk/rpi-elixir:latest
 
     docker login
 
     # This takes about a minute:
     docker push joakimk/rpi-elixir:version
+    docker push joakimk/rpi-elixir:latest
 
 ## License
 
