@@ -1,4 +1,4 @@
-FROM joakim/rpi-erlang:18.1.3
+FROM joakimk/rpi-erlang:18.1.3
 MAINTAINER Joakim Kolsjö <joakim.kolsjo<at>gmail.com>
 
 ENV ELIXIR_VERSION=1.1.1 \
