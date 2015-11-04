@@ -30,8 +30,8 @@ Example of mounting a project:
     root@c0091ee9dfee:/# cd /project/
     root@c0091ee9dfee:/project# elixir hello.exs
     Hello
-
-More on this, and not running as root, soon :)
+    
+Also see the example of running a phoenix app: <https://github.com/joakimk/rpi-elixir-phoenix-app-example>
 
 ## Building
 
