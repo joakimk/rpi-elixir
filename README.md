@@ -1,5 +1,7 @@
 [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/)
 
+[!](https://files.slack.com/files-pri/T03R80QEF-F0DRXNU5P/screen_shot_2015-11-04_at_18.47.27.png)
+
 Elixir docker image for Raspberry Pi (compiled for it's ARM cpu).
 
 * Optimized for size: the image is about 349MB (~345MB of that is OS and Erlang)
