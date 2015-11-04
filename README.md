@@ -1,6 +1,6 @@
 [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/)
 
-![](https://files.slack.com/files-pri/T03R80QEF-F0DRXNU5P/screen_shot_2015-11-04_at_18.47.27.png)
+![](https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/10794/29896/UqWChcQoYl7vADa/Screen%20Shot%202015-11-04%20at%2018.47.27.png)
 
 Elixir docker image for Raspberry Pi (compiled for it's ARM cpu).
 
