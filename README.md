@@ -1,6 +1,6 @@
 An Elixir docker image for Raspberry Pi.
 
-Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory card and run `docker pull joakimk/rpi-elixir:1.1.1` to get:
+Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory card and run `docker pull joakimk/rpi-elixir` to get:
 
 ![](https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/10794/29896/UqWChcQoYl7vADa/Screen%20Shot%202015-11-04%20at%2018.47.27.png)
 
@@ -17,18 +17,20 @@ On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/
 
     # This takes about 7 minutes on a fast connection, less for updates later as
     # you will have the OS and erlang images already.
-    docker pull joakimk/rpi-elixir:1.1.1
+    docker pull joakimk/rpi-elixir
 
-    docker run -i -t joakimk/rpi-elixir:1.1.1 iex
-    
+    # or: docker pull joakimk/rpi-elixir:1.1.1
+
+    docker run -i -t joakimk/rpi-elixir iex
+
 Example of mounting a project:
 
     $ echo "IO.puts('Hello')" > hello.exs
-    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir:1.1.1 bash
+    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
     root@c0091ee9dfee:/# cd /project/
     root@c0091ee9dfee:/project# elixir hello.exs
     Hello
-    
+
 More on this, and not running as root, soon :)
 
 ## Building
