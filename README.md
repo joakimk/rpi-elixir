@@ -1,4 +1,4 @@
-Elixir docker image for Raspberry Pi (compiled for it's ARM cpu).
+An Elixir docker image for Raspberry Pi.
 
 Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory card and run `docker pull joakimk/rpi-elixir:1.1.1` to get:
 
