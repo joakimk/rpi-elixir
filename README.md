@@ -2,18 +2,15 @@
 
 Elixir docker image for Raspberry Pi (compiled for it's ARM cpu).
 
-Just get [an OS with docker](http://blog.hypriot.com/downloads/) on the memory card and run `docker pull joakimk/rpi-elixir:1.1.1` to get:
+Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory card and run `docker pull joakimk/rpi-elixir:1.1.1` to get:
 
 ![](https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/10794/29896/UqWChcQoYl7vADa/Screen%20Shot%202015-11-04%20at%2018.47.27.png)
 
-About:
+## About
 
 * Optimized for size: the image is about 349MB (~345MB of that is OS and Erlang)
 * It's built using a Raspberry Pi 2. Please open an issue if it does not work on your Raspberry Pi version.
-
-Related docker images:
-
-* [rpi-erlang](https://github.com/joakimk/rpi-erlang)
+* Built on [rpi-erlang](https://github.com/joakimk/rpi-erlang)
 
 ## Installing and running
 
