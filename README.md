@@ -15,10 +15,21 @@ Related docker images:
 
 On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/):
 
-    docker pull joakimk/rpi-elixir
-    # or: docker pull joakimk/rpi-elixir:1.1.1
+    # This takes about 7 minutes on a fast connection, less for updates later as
+    # you will have the OS and erlang images already.
+    docker pull joakimk/rpi-elixir:1.1.1
 
-    docker run -i -t joakimk/rpi-elixir iex
+    docker run -i -t joakimk/rpi-elixir:1.1.1 iex
+    
+Example of mounting a project:
+
+    $ echo "IO.puts('Hello')" > hello.exs
+    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir:1.1.1 bash
+    root@c0091ee9dfee:/# cd /project/
+    root@c0091ee9dfee:/project# elixir hello.exs
+    Hello
+    
+More on this, and not running as root, soon :)
 
 ## Building
 
