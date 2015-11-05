@@ -6,7 +6,9 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 
 ## About
 
-* Optimized for size: the image is about 349MB (~345MB of that is OS and Erlang).
+* Sets up an unpriviliged user
+* Includes basic tools like hex and rebar (so you can just run "mix deps.get && mix test" in a regular mix project).
+* Optimized for size: the image is about ? (~345MB of that is OS and Erlang).
 * It's built using a Raspberry Pi 2. Please open an issue if it does not work on your Raspberry Pi version.
 * Built on [rpi-erlang](https://github.com/joakimk/rpi-erlang).
 * Can also be found on [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/).
@@ -34,8 +36,6 @@ Example of mounting a project:
 Also see the example of running a phoenix app: <https://github.com/joakimk/rpi-elixir-phoenix-app-example>
 
 ## Building
-
-This takes 12 minutes on a Raspberry Pi 2.
 
     make
 
