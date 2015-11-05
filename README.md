@@ -29,10 +29,17 @@ Example of mounting a project:
 
     $ echo "IO.puts('Hello')" > hello.exs
     $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
-    root@c0091ee9dfee:/# cd /project/
-    root@c0091ee9dfee:/project# elixir hello.exs
+    deploy@33db28b1e140:~$ cd /project
+    deploy@33db28b1e140:/project$ elixir hello.exs
     Hello
-    
+
+Example of running tests in a mix project:
+
+    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
+    deploy@33db28b1e140:~$ cd /project
+    deploy@33db28b1e140:/project$ mix deps.get
+    deploy@33db28b1e140:/project$ mix test
+
 Also see the example of running a phoenix app: <https://github.com/joakimk/rpi-elixir-phoenix-app-example>
 
 ## Building
