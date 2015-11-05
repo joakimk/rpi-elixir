@@ -35,6 +35,7 @@ Example of mounting a project:
 
 Example of running tests in a mix project:
 
+    $ cd path/to/project
     $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
     deploy@33db28b1e140:~$ cd /project
     deploy@33db28b1e140:/project$ mix deps.get
