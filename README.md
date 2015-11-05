@@ -25,14 +25,6 @@ On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/
 
     docker run -i -t joakimk/rpi-elixir iex
 
-Example of mounting a project:
-
-    $ echo "IO.puts('Hello')" > hello.exs
-    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
-    deploy@33db28b1e140:~$ cd /project
-    deploy@33db28b1e140:/project$ elixir hello.exs
-    Hello
-
 Example of running tests in a mix project:
 
     $ cd path/to/project
