@@ -46,6 +46,21 @@ Example of running a mix/phoenix project without building a new image:
     
 Hex packages and compiled code are stored within the project (the mounted volume), so next time you start `joakimk/rpi-elixir bash` it will still be there. If you update hex or rebar, those will be installed into the image and lost between restarts, unless you [build your own image](#adding-more-software-or-overriding-settings-locally) with the new versions.
 
+## Running using multiple docker containers
+
+    $ docker run -d --name redis hypriot/rpi-redis
+    
+    $ git clone https://github.com/joakimk/toniq.git toniq
+    $ cd toniq
+    $ docker run -v $PWD:/toniq -i -t --link redis:redis joakimk/rpi-elixir bash
+    deploy@0a8951d3817d:~$ cd /toniq
+    deploy@0a8951d3817d:/toniq$ echo 'config :toniq, :redis_url, System.get_env("REDIS_PORT_6379_TCP")' >>     config/config.exs 
+    deploy@0a8951d3817d:/toniq$ mix test
+    ..............................
+
+    Finished in 6.1 seconds (4.4s on load, 1.6s on tests)
+    30 tests, 0 failures
+
 ## Adding more software or overriding settings locally
 
 Add a "Dockerfile":
