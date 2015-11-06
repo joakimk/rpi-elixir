@@ -15,12 +15,14 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 * Can also be found on [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/).
 * Downloading takes about 7 minutes on a fast connection, less for updates.
 
-## Installing and running
+## Installing
 
 On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/):
 
     docker pull joakimk/rpi-elixir
     # or: docker pull joakimk/rpi-elixir:1.1.1
+
+## Running
 
 Running an iex prompt:
 
@@ -37,9 +39,10 @@ Example of running a mix/phoenix project without building a new image:
 
 You can also try the phoenix chat app example: [rpi-elixir-phoenix-app-example](https://github.com/joakimk/rpi-elixir-phoenix-app-example).
 
-Adding more software or overriding settings locally:
+## Adding more software or overriding settings locally
 
-    # Dockerfile
+Add a "Dockerfile":
+
     FROM joakimk/rpi-elixir
     USER root
     RUN apt-get update \
@@ -49,7 +52,15 @@ Adding more software or overriding settings locally:
     USER deploy
     CMD ["bash"]
     
-    $ docker build . -t elixir-dev
+Then build your own image:
+    
+    $ docker build -t elixir-dev .
+    
+And use it:
+  
+    $ docker run -i -t -p 4000:4000 elixir-dev
+    deploy@33db28b1e140:~$ $ vim --version|head -1
+    VIM - Vi IMproved 7.3 (2010 Aug 15, compiled Feb 20 2013 06:48:10)
 
 ## Building
 
