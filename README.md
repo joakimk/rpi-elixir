@@ -20,13 +20,17 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/):
 
     docker pull joakimk/rpi-elixir
-    # or: docker pull joakimk/rpi-elixir:1.1.1
+    
+Or get a specific version:
+    
+    docker pull joakimk/rpi-elixir:1.1.1
 
 ## Running
 
 Running an iex prompt:
 
     docker run -i -t joakimk/rpi-elixir
+    # or: docker run -i -t joakimk/rpi-elixir:1.1.1
 
 Example of running a mix/phoenix project without building a new image:
 
