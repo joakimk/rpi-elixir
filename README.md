@@ -8,7 +8,7 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 
 * Includes basic tools like hex and rebar
 * Optimized for size: the image is about 366MB (~345MB of that is OS and Erlang).
-* Secure by default (by using a unpriviliged user, which can be overriden in your own Dockerfile).
+* Secure by default (by using a unpriviliged user, which can be overriden in [your own Dockerfile](#adding-more-software-or-overriding-settings-locally)).
 * It's built using a Raspberry Pi 2.
   - Please open an issue if it does not work on your Raspberry Pi version.
 * Built on [rpi-erlang](https://github.com/joakimk/rpi-erlang).
