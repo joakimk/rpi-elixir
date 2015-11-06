@@ -52,9 +52,9 @@ Hex packages and compiled code are stored within the project (the mounted volume
     
     $ git clone https://github.com/joakimk/toniq.git toniq
     $ cd toniq
+    $ echo 'config :toniq, :redis_url, System.get_env("REDIS_PORT_6379_TCP")' >> config/config.exs
     $ docker run -v $PWD:/toniq -i -t --link redis:redis joakimk/rpi-elixir bash
     deploy@0a8951d3817d:~$ cd /toniq
-    deploy@0a8951d3817d:/toniq$ echo 'config :toniq, :redis_url, System.get_env("REDIS_PORT_6379_TCP")' >>     config/config.exs 
     deploy@0a8951d3817d:/toniq$ mix test
     ..............................
 
