@@ -14,6 +14,7 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 * Built on [rpi-erlang](https://github.com/joakimk/rpi-erlang).
 * Can also be found on [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/).
 * Downloading takes about 7 minutes on a fast connection, less for updates.
+* Can be used to easily build app-images like [rpi-elixir-phoenix-app-example](https://github.com/joakimk/rpi-elixir-phoenix-app-example).
 
 ## Installing
 
@@ -42,8 +43,8 @@ Example of running a mix/phoenix project without building a new image:
     deploy@33db28b1e140:/project$ mix deps.get
     deploy@33db28b1e140:/project$ mix test
     deploy@33db28b1e140:/project$ mix phoenix.server
-
-You can also try the phoenix chat app example: [rpi-elixir-phoenix-app-example](https://github.com/joakimk/rpi-elixir-phoenix-app-example).
+    
+Hex packages and compiled code are stored within the project (the mounted volume), so next time you start `joakimk/rpi-elixir bash` it will still be there. If you update hex or rebar, those will be installed into the image and lost between restarts, unless you [build your own image](#adding-more-software-or-overriding-settings-locally) with the new versions.
 
 ## Adding more software or overriding settings locally
 
