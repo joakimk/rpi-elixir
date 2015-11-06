@@ -21,9 +21,11 @@ On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/
 
     docker pull joakimk/rpi-elixir
     
-Or get a specific version:
+Or get a specific tag:
     
     docker pull joakimk/rpi-elixir:1.1.1
+    
+All available tags can be found on [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/tags/).
 
 ## Running
 
