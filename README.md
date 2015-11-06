@@ -8,32 +8,48 @@ Just put [an OS with docker](http://blog.hypriot.com/downloads/) on it's memory 
 
 * Includes basic tools like hex and rebar
 * Optimized for size: the image is about 366MB (~345MB of that is OS and Erlang).
-* Sets up an unpriviliged user
-* It's built using a Raspberry Pi 2. Please open an issue if it does not work on your Raspberry Pi version.
+* Secure by default (by using a unpriviliged user, which can be overriden in your own Dockerfile).
+* It's built using a Raspberry Pi 2.
+  - Please open an issue if it does not work on your Raspberry Pi version.
 * Built on [rpi-erlang](https://github.com/joakimk/rpi-erlang).
 * Can also be found on [Docker Hub](https://hub.docker.com/r/joakimk/rpi-elixir/).
+* Downloading takes about 7 minutes on a fast connection, less for updates.
 
 ## Installing and running
 
 On a Raspberry Pi running [an OS with docker](http://blog.hypriot.com/downloads/):
 
-    # This takes about 7 minutes on a fast connection, less for updates later as
-    # you will have the OS and erlang images already.
     docker pull joakimk/rpi-elixir
-
     # or: docker pull joakimk/rpi-elixir:1.1.1
 
-    docker run -i -t joakimk/rpi-elixir iex
+Running an iex prompt:
 
-Example of running tests in a mix project:
+    docker run -i -t joakimk/rpi-elixir
+
+Example of running a mix/phoenix project without building a new image:
 
     $ cd path/to/project
-    $ docker run -v $PWD:/project -i -t joakimk/rpi-elixir bash
+    $ docker run -v $PWD:/project -i -t -p 4000:4000 joakimk/rpi-elixir bash
     deploy@33db28b1e140:~$ cd /project
     deploy@33db28b1e140:/project$ mix deps.get
     deploy@33db28b1e140:/project$ mix test
+    deploy@33db28b1e140:/project$ mix phoenix.server
 
-Also see the example of running a phoenix app: <https://github.com/joakimk/rpi-elixir-phoenix-app-example>
+You can also try the phoenix chat app example: [rpi-elixir-phoenix-app-example](https://github.com/joakimk/rpi-elixir-phoenix-app-example).
+
+Adding more software or overriding settings locally:
+
+    # Dockerfile
+    FROM joakimk/rpi-elixir
+    USER root
+    RUN apt-get update \
+      && apt-get install -y --no-install-recommends vim \
+      && apt-get clean \
+      && rm -rf /var/lib/apt/lists/*
+    USER deploy
+    CMD ["bash"]
+    
+    $ docker build . -t elixir-dev
 
 ## Building
 
