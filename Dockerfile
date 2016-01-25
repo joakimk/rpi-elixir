@@ -1,8 +1,8 @@
 FROM joakimk/rpi-erlang:18.1.3
 MAINTAINER Joakim Kolsjo <joakim.kolsjo<at>gmail.com>
 
-ENV ELIXIR_VERSION=1.1.1 \
-    DOWNLOAD_SHA=3b7d6e4fdbcc82d19fa76f4e384f8a87535abcd00ef04528dc6b6706f32a106a
+ENV ELIXIR_VERSION=1.2.1 \
+    DOWNLOAD_SHA=f89175a3afde9bd70d4cc97acdb25014e6848c27
 
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \
