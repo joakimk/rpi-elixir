@@ -2,6 +2,8 @@ An Elixir docker image for Raspberry Pi.
 
 This is a Raspberry Pi version of <https://github.com/bitwalker/alpine-elixir>. See that repo for docs.
 
+See <https://github.com/bitwalker/alpine-elixir-phoenix> for an example of how to use this to run an elixir app.
+
 ## Building
 
     make
